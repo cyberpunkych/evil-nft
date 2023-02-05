@@ -41,9 +41,10 @@ contract EvilNFT is ERC1155, Ownable {
     uint256 public constant GHOSTSCRIPT_0DAY_RCE    = 33;
     uint256 public constant GHOSTSCRIPT_CVE_2019_14813    = 34;
     uint256 public constant COLLABORATOR    = 35;
+    uint256 public constant CVE_2022_44268    = 36;
 
     constructor() ERC1155("https://evil-nft.vercel.app/api/{id}.json") {
-        for (uint i = 0; i <= COLLABORATOR; i++) {
+        for (uint i = 0; i <= CVE_2022_44268; i++) {
           _mint(msg.sender, i, 1, "");
         }
     }
